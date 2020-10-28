@@ -58,7 +58,13 @@ result = result.split('-');
 str = firstName + '-' + lastName + ',' + name;
 result = str.replace('e', 'E');
 
+result = str.normalize();
+result = str.repeat(2);
+str = '  a' + str + 'a  ';
+result = str.trim();
+
 // search string
 result = str.includes('s');
+result = str.endsWith(name);
 
 console.log(result);
