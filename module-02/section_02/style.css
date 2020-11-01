@@ -53,25 +53,19 @@ input {
   margin: 10px;
 }
 
-.close {
-  background-color: white;
+.delete-item {
   color: black;
   cursor: pointer;
+  float: right;
 }
 
 ul {
   list-style: none;
 }
 
-.task {
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.task i {
-  font-size: 0.75rem;
-  float: right;
+ul li {
+  margin: 2rem 0;
+  align-self: center;
 }
 
 .task__label {
