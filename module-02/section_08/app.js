@@ -1,5 +1,5 @@
 /*
- * Module 02 | Section 07
+ * Module 02 | Section 08
  * Mouse Events
  */
 const clearBtn = document.querySelector('#clear-all');

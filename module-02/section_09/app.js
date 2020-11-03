@@ -1,6 +1,6 @@
 /*
- * Module 02 | Section 07
- * Keyvoard Events
+ * Module 02 | Section 09
+ * Keyboard Events
  */
 const form = document.querySelector('form');
 const taskInput = document.getElementsByClassName('newTask')[0];
