@@ -10,6 +10,7 @@ const name = localStorage.getItem('name');
 console.log(localStorage.getItem('age')); // reports null
 console.log(name);
 
+localStorage.clear();
 localStorage.removeItem('name');
 
 // Session Storage
