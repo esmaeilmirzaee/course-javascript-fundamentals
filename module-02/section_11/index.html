@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d14029ebce.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>To do list</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title" id="title">Welcome to ToDo App</h1>
+      <div class="row">
+        <h6 class="subtitle">Task List</h6>
+        <label for="task" class="task__label">New Task</label>
+        <form action="#" class="row task__item" class="form">
+          <input
+            id="task"
+            type="text"
+            class="newTask"
+            placeholder="Walk the Dog"
+          />
+          <input
+            type="submit"
+            id="add-new-task"
+            class="btn btn-primary add__task"
+            value="Add Task"
+          />
+        </form>
+      </div>
+      <hr />
+      <div class="row">
+        <h6 class="subtitle" id="task-title">Tasks</h6>
+        <ul class="tasks">
+          <li class="task">
+            List Item
+            <a href="#" class="delete-item">
+              <i class="fa fa-remove"></i>
+            </a>
+          </li>
+          <li class="task">
+            List Item
+            <a href="#" class="delete-item">
+              <i class="fa fa-remove"></i>
+            </a>
+          </li>
+          <li class="task">
+            List Item
+            <a href="#" class="delete-item">
+              <i class="fa fa-remove"></i>
+            </a>
+          </li>
+          <li class="task">
+            List Item
+            <a href="#" class="delete-item">
+              <i class="fa fa-remove"></i>
+            </a>
+          </li>
+          <li class="task">
+            List Item
+            <a href="#" class="delete-item">
+              <i class="fa fa-remove"></i>
+            </a>
+          </li>
+          <li class="task">
+            List Item
+            <a href="#" class="delete-item">
+              <i class="fa fa-remove"></i>
+            </a>
+          </li>
+        </ul>
+        <a class="btn btn-secondary" id="clear-all">Clear All</a>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
