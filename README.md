@@ -21,3 +21,8 @@ What is JS? How to set up the development environment?
 ##### Section 05 | Conversion
 
 ##### Section 06 | Math
+
+### Module 02 | Event Handling
+
+
+### Module 03 | To Do List App
