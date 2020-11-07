@@ -25,4 +25,6 @@ What is JS? How to set up the development environment?
 ### Module 02 | Event Handling
 
 
-### Module 03 | To Do List App
+### Module 03 | Projects
+> Section 01, 02 and 03 are a to do list app. 
+> Section 04, 05 and 05 are a loan calculator.
