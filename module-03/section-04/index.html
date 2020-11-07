@@ -14,7 +14,7 @@
             <div class="card-content">
                 <div class="content">
                     <h1 class="is-size-1 has-text-centered has-text-weight-light">Loan Calculator</h1>
-                    <div class="control has-icons-left">
+                    <div class="control has-icons-left" id="error-place">
                         <input id="amount" type="number" class="input is-medium" placeholder="Loan Amount">
                         <span class="icon is-small is-left">
                             <i class="fas fa-dollar-sign"></i>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <button href="#" class="button is-link is-light is-large is-fullwidth">
+                <button href="#" class="button is-link is-light is-large is-fullwidth" id="calculate">
                     <span class="icon">
                     <i class="fa fa-calculator"></i>
                 </span>
@@ -46,14 +46,15 @@
                     <button class="button is-loading is-large is-static is-white" disabled></button>
                 </div>
             </div>
+
             <!-- Results -->
-            <div class="pt-4">
+            <div class="pt-4" id="results">
                 <h1 class="label is-size-3 has-text-centered">Results</h1>
                 <div class="column is-4">
                     <div class="field has-addons has-addons-left">
                         <button class="button is-info" disabled>Monthly Payment</button>
-                        <div class="control is-expanded" id="monthly-payment">
-                            <input type="number" class="input is-static pl-1" disabled>
+                        <div class="control is-expanded">
+                            <input id="monthly-payment" type="number" class="input is-static pl-1" disabled>
                         </div>
                     </div>
                 </div>
@@ -61,8 +62,8 @@
                 <div class="column is-4">
                     <div class="field has-addons has-addons-left">
                         <button class="button is-warning" disabled>Total Payment</button>
-                        <div class="control is-expanded" id="total-payment">
-                            <input type="number" class="input is-static pl-1" disabled>
+                        <div class="control is-expanded">
+                            <input id="total-payment" type="number" class="input is-static pl-1" disabled>
                         </div>
                     </div>
                 </div>
@@ -70,8 +71,8 @@
                 <div class="column is-4">
                     <div class="field has-addons has-addons-left">
                         <button class="button is-danger is-light" disabled>Total Interest</button>
-                        <div class="control is-expanded" id="Total Interest">
-                            <input type="number" class="input is-static pl-1" disabled>
+                        <div class="control is-expanded">
+                            <input id="total-interest" type="number" class="input is-static pl-1" disabled>
                         </div>
                     </div>
                 </div>
@@ -80,5 +81,6 @@
         </div>
     </div>
 </section>
+<script src="./app.js"></script>
 </body>
 </html>
