@@ -8,36 +8,42 @@ const clearTasks = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 
 let tasks;
-if (localStorage.getItem('tasks') === null) {
-  tasks = [];
-} else {
-  tasks = JSON.parse(localStorage.getItem('tasks'));
-  if (tasks.length > 0) {
-    tasks.forEach(function (task) {
-      const li = document.createElement('li');
-      li.className = 'collection-item';
-      li.appendChild(document.createTextNode(task));
-
-      const link = document.createElement('a');
-      link.className = 'delete-item secondary-content';
-      link.innerHTML = '<i class="fa fa-remove"></i>';
-      li.appendChild(link);
-
-      taskList.appendChild(li);
-    });
-  }
-}
-
 eventListener();
 
 function eventListener() {
+  // Retriving previous data from local storage
+  document.addEventListener('DOMContentLoaded', getTasks);
   // Add a new task event
-  document.querySelector('#task-form').addEventListener('submit', addTask); // Remove a task event
+  document.querySelector('#task-form').addEventListener('submit', addTask);
+  // Remove a task event
   taskList.addEventListener('click', delTask);
   // Remove all tasks event
   clearTasks.addEventListener('click', delTasks);
   // Filter event
   filter.addEventListener('keyup', filterTasks);
+}
+
+// Add tasks from local storage
+function getTasks(e) {
+  if (localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (tasks.length > 0) {
+      tasks.forEach(function (task) {
+        const li = document.createElement('li');
+        li.className = 'collection-item';
+        li.appendChild(document.createTextNode(task));
+
+        const link = document.createElement('a');
+        link.className = 'delete-item secondary-content';
+        link.innerHTML = '<i class="fa fa-remove"></i>';
+        li.appendChild(link);
+
+        taskList.appendChild(li);
+      });
+    }
+  }
 }
 
 function addTask(e) {
@@ -94,7 +100,8 @@ function delTasks(e) {
      */
 
     // Empty localStorage to an empty list
-    localStorage.setItem('tasks', []);
+    // localStorage.setItem('tasks', []);
+    localStorage.clear();
   }
 }
 
