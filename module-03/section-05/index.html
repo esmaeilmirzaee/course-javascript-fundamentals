@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <title>Guess the number</title>
+</head>
+<body>
+    <section class="hero">
+        <div class="container p-8">
+            <div class="card is-centered p-6">
+                <div class="field has-text-centered">
+
+                <h1 class="is-size-1 title">Guess</h1>
+                <p class="subtitle">Welcome</p>
+                </div>
+                <div class="content">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input id="guess" type="number" class="input" placeholder="Guess">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-question"></i>
+                            </span>
+                            <span class="icon is-small is-right" id="tick">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+                        <p class="help" id="message">This user is available</p>
+                        <button class="button is-info is-fullwidth">Check</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./app.js"></script>
+</body>
+</html>
