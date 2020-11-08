@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     generateRandomInt();
     replayButtonUI.style.display = 'none';
     messageUI.style.display = 'none';
+    guessUI.placeholder = `${min} ~ ${max}`
 });
 
 indefinitelyUI.addEventListener("change", function(e) {
