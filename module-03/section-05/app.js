@@ -28,6 +28,7 @@ buttonUI.addEventListener("click", function(e) {
     }
 });
 
+
 replayButtonUI.addEventListener("click", function(e) {
     resetTheGame();
 })
@@ -54,6 +55,12 @@ function generateRandomInt() {
     console.log(randomInt);
 }
 
-function restTheGame() {
-    
+function resetTheGame() {
+    messageUI.style.display = 'none';
+    guessUI.value = "";
+    guessUI.disabled = false;
+    buttonUI.disabled = false;
+    buttonUI.classList.remove('is-light');
+    buttonUI.children[1].style.display = 'none';
+    generateRandomInt();
 }
