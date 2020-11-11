@@ -32,7 +32,7 @@ buttonUI.addEventListener("click", function(e) {
 
 replayButtonUI.addEventListener("click", function(e) {
     resetTheGame();
-})
+});
 
 function checkTheAnswer(random, guess) {
     console.log(random, guess);
