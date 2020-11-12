@@ -1,3 +1,4 @@
+// Module 05 | Section 01 | EcmaScript 05 without classes and objects
 const notificationUI = document.querySelector('#notification');
 const notificationMessageUI = document.querySelector('#notification-message');
 const titleUI = document.querySelector('#title');
@@ -7,7 +8,7 @@ const buttonUI = document.querySelector('#button');
 const tableBodyUI = document.querySelector('#books');
 
 let book = {
-    id: 0,
+    id: 1,
     title: '',
     author: '',
     isbn: ''
@@ -31,7 +32,7 @@ function startApp(e) {
 
 function addABook(e) {
     e.preventDefault();
-    if (titleUI.value !== '' && authorUI.value !== '' && isbnUI !== '') {
+    if (titleUI.value !== '' || authorUI.value !== '' || isbnUI !== '') {
         console.log('Start to build', titleUI.value);
         book = {id: books.length===0 ? 1 : books.length+1, title: titleUI.value, author: authorUI.value, isbn: isbnUI.value};
         save(book);
