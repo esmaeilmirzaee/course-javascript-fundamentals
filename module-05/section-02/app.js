@@ -1,13 +1,12 @@
 // Module 05 | Section 02 | EcmaScript 6 with classes and objects
-class Book {
-    constructor(title, author, isbn) {
+function Book(title, author, isbn) {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-    }
+
 }
 
-class UI {}
+function UI() {}
 
 UI.prototype.addABookToList = function(book) {
     const delButton = document.createElement('button');
