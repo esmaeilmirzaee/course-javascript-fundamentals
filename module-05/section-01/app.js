@@ -79,6 +79,8 @@ function saveOnLS(book) {
     localStorage.setItem('books', JSON.stringify(books));
 }
 
-function delABook() {
-
-}
+document.querySelector('#books').addEventListener('click', function(e) {
+    if (e.target.className === 'delete') {
+        e.target.parentElement.parentElement.remove();
+    }
+});
