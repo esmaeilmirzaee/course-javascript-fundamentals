@@ -58,10 +58,50 @@ class UI {
     }
 }
 
+// Storage
+class Store {
+    static addABook(book) {
+        const books = this.retrieveBooks();
+        books.push(book);
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+
+    static delABook(isbn) {
+        const books = this.retrieveBooks();
+        books.forEach(function (book, index) {
+            if (isbn === book.isbn) {
+                books.splice(index, 1);
+                localStorage.setItem('books', JSON.stringify(books));
+            }
+        });
+    }
+
+    static retrieveBooks() {
+        let books;
+        if (localStorage.getItem('books') === null) {
+            books = [];
+        } else {
+            books = JSON.parse(localStorage.getItem('books'));
+        }
+
+        return books;
+    }
+
+    static displayBooks() {
+        const ui = new UI();
+        const books = this.retrieveBooks();
+        books.forEach(function (book) {
+            ui.addABook(book);
+        });
+    }
+
+}
+
 // Load
 document.addEventListener('DOMContentLoaded', function(e) {
    e.preventDefault();
    document.getElementById('notification').style.display = 'none';
+   Store.displayBooks();
 });
 
 
@@ -80,6 +120,7 @@ document.getElementById('button').addEventListener('click', function(e) {
         const resultAddABook = ui.addABook(book);
         if (resultAddABook) {
             ui.showNotification("A new book added.", 'is-success');
+            Store.addABook(book);
             ui.clearFields();
         } else {
             ui.showNotification("A new book add failed.", 'is-danger');
@@ -91,4 +132,5 @@ document.getElementById('button').addEventListener('click', function(e) {
 document.getElementById('books').addEventListener('click', function(e) {
     const ui = new UI();
     ui.delABook(e.target);
+    Store.delABook(e.target.parentElement.previousElementSibling.textContent);
 });
