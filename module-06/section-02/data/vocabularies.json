@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "verb": "Aller",
+    "meaning": "Go"
+  },
+  {
+    "id": 2,
+    "verb": "Pouvoir",
+    "meaning": "Can"
+  },
+  {
+    "id": 3,
+    "verb": "Vouloir",
+    "meaning": "May"
+  },
+  {
+    "id": 4,
+    "verb": "Faire",
+    "meaning": "Make"
+  },
+  {
+    "id": 5,
+    "verb": "Parler",
+    "meaning": "Speak"
+  },
+  {
+    "id": 6,
+    "verb": "Demander",
+    "meaning": "Request"
+  }
+]
