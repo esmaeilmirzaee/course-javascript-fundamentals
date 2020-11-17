@@ -7,18 +7,35 @@ document.getElementById('get-data').addEventListener('click', function (e) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'data.txt', true); // to be asynchronous add true
 
-    xhr.onload = function(err) {
-        // Some HTTP Status
-        // 200: OK
-        // 403: Forbidden
-        // 404: Not found
-        // 5**: Server error
-        if (this.status === 200) {
-            console.log(this.responseText);
+    // Part Two
+    /*
+     * readyState Value
+     * 0: Request not initialised
+     * 1: Server connection established
+     * 2: Request received
+     * 3: Processing request
+     * 4: Request finished & response is ready
+     */
+    xhr.onreadystatechange = function() {
+        if (this.status === 200 && this.readyState === 4) {
             displayMessage(this.responseText);
-        } else {
-            console.log(err);
         }
+    };
+
+    xhr.onprogress = function() {
+        console.log("on progress");
+    };
+
+    xhr.onloadstart = function() {
+        console.log('on load start');
+    };
+
+    xhr.onloadend = function() {
+        console.log('on load end');
+    };
+
+    xhr.onerror = function() {
+        console.log('error');
     };
 
     xhr.send();
@@ -26,5 +43,6 @@ document.getElementById('get-data').addEventListener('click', function (e) {
 
 // display message
 function displayMessage(message) {
+    displayUI.className = 'title';
     displayUI.innerHTML = `<h1>${message}</h1>`;
 }
