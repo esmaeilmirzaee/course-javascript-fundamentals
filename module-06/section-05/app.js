@@ -33,6 +33,14 @@ http.GET('https://jsonplaceholder.typicode.com/posts', function(err, response) {
 });
 
 // POST
+const data = {title: 'Esmaeil', body: 'lorem ipsum dolae'};
+http.POST('https://jsonplaceholder.typicode.com/posts', data, function (err, response) {
+    if (err === null) {
+        console.log(response);
+    } else {
+        console.log(err);
+    }
+});
 
 // PUT
 
