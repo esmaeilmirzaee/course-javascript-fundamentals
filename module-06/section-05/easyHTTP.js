@@ -32,7 +32,12 @@ easyHTTP.prototype.POST = function(url, data, callback) {
     this.http.send(JSON.stringify(data));
 };
 
+// PUT
+http.put('https://jsonplaceholder.typicode.com/posts/5', data, function() {
+
+});
 
 // DELETE
+http.delete('https://jsonplaceholder.typicode.com/posts/1', function() {
 
-// PUT
+});

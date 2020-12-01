@@ -43,5 +43,7 @@ http.POST('https://jsonplaceholder.typicode.com/posts', data, function (err, res
 });
 
 // PUT
+// TODO: This is identical to POST method
 
 // DELETE
+// TODO: This is identical to GET method
