@@ -16,4 +16,28 @@ class EasyHTTP {
         const responseData = await response.json();
         return responseData;
     }
+
+    async put(url, data) {
+        const response = await fetch(url, {
+            method: 'PUT',
+            header: {
+                'Content-Type': 'application/json'
+            },
+            body: data
+        });
+        const responseData = await response.json();
+        return responseData;
+    }
+
+    async delete(url) {
+        const response = await fetch(url, {
+            method: 'DELETE',
+            header: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const responseData = await response.json();
+        return responseData;
+    }
 }
